@@ -189,19 +189,19 @@ class exam:
 
     # ----------------------------------------------- OPG 17-----------------------------------------------
     def opg17():
-        # LOOK AT DENDOGRAM 1
-        clu = cluster()
-        #Cutoff at the level of 3 clusters = 3 vertical lines
-        # Here we see O2 has been seperated, and O6 as well. 
-        # Since O2 was seperated in the first cluster, we give it 2
-        # And O6 we give 3
-        # The rest have not been seperated yet, but majority black so we give it 1
-        clusters_1=[1,2,1,1,1,3,1,1,1,1]
+        # # LOOK AT DENDOGRAM 1
+        # clu = cluster()
+        # #Cutoff at the level of 3 clusters = 3 vertical lines
+        # # Here we see O2 has been seperated, and O6 as well. 
+        # # Since O2 was seperated in the first cluster, we give it 2
+        # # And O6 we give 3
+        # # The rest have not been seperated yet, but majority black so we give it 1
+        # clusters_1=[1,2,1,1,1,3,1,1,1,1]
         
-        # The true class labels are just O1 - O10 where black = 1, red = 2
-        clusters_2=[1,2,1,1,1,2,2,2,2,1]
-        clu.cluster_similarity(clusters_1,clusters_2)
-        #Which gives Rand = 0.511111
+        # # The true class labels are just O1 - O10 where black = 1, red = 2
+        # clusters_2=[1,2,1,1,1,2,2,2,2,1]
+        # clu.cluster_similarity(clusters_1,clusters_2)
+        # #Which gives Rand = 0.511111
         return "C"
 
     # ----------------------------------------------- OPG 18-----------------------------------------------
@@ -336,43 +336,43 @@ class exam:
         return "E"
 
     # -------------------------------- answers dataframe -------------------------------------------------
-    def answers(show=True, csv=False, excel=False):
+    def answers(show=True, csv=True, excel=False):
         ans = pd.DataFrame(
             columns=["Student number: s174852"]
         )  # columns = ["OPG", "svar"])
 
-#        ans.loc[0] = ""
-#        ans.loc[1] = "Q01: {}".format(exam.opg1())
-#        ans.loc[2] = "Q02: {}".format(exam.opg2())
-#        ans.loc[3] = "Q03: {}".format(exam.opg3())
-#        ans.loc[4] = "Q04: {}".format(exam.opg4())
+        ans.loc[0] = ""
+        # ans.loc[1] = "Q01: {}".format(exam.opg1())
+        # ans.loc[2] = "Q02: {}".format(exam.opg2())
+        # ans.loc[3] = "Q03: {}".format(exam.opg3())
+        # ans.loc[4] = "Q04: {}".format(exam.opg4())
         # ans.loc[5] = "Q05: {}".format(exam.opg5())
-#        ans.loc[6] = "Q06: {}".format(exam.opg6())
-#        ans.loc[7] = "Q07: {}".format(exam.opg7())
-#        ans.loc[8] = "Q08: {}".format(exam.opg8())
-#        ans.loc[9] = "Q09: {}".format(exam.opg9())
-#        ans.loc[10] = "Q10: {}".format(exam.opg10())
-#        ans.loc[11] = ""
+        # ans.loc[6] = "Q06: {}".format(exam.opg6())
+        # ans.loc[7] = "Q07: {}".format(exam.opg7())
+        # ans.loc[8] = "Q08: {}".format(exam.opg8())
+        # ans.loc[9] = "Q09: {}".format(exam.opg9())
+        # ans.loc[10] = "Q10: {}".format(exam.opg10())
+        # ans.loc[11] = ""
 
-#        ans.loc[12] = "Q11: {}".format(exam.opg11())
-#        ans.loc[13] = "Q12: {}".format(exam.opg12())
-#        ans.loc[14] = "Q13: {}".format(exam.opg13())
-#        ans.loc[15] = "Q14: {}".format(exam.opg14())
-#        ans.loc[16] = "Q15: {}".format(exam.opg15())
+        # ans.loc[12] = "Q11: {}".format(exam.opg11())
+        # ans.loc[13] = "Q12: {}".format(exam.opg12())
+        # ans.loc[14] = "Q13: {}".format(exam.opg13())
+        # ans.loc[15] = "Q14: {}".format(exam.opg14())
+        # ans.loc[16] = "Q15: {}".format(exam.opg15())
         # ans.loc[17] = "Q16: {}".format(exam.opg16())
-#        ans.loc[18] = "Q17: {}".format(exam.opg17())
-#        ans.loc[19] = "Q18: {}".format(exam.opg18())
-#        ans.loc[20] = "Q19: {}".format(exam.opg19())
-#        ans.loc[21] = "Q20: {}".format(exam.opg20())
-#        ans.loc[22] = ""
+        # ans.loc[18] = "Q17: {}".format(exam.opg17())
+        # ans.loc[19] = "Q18: {}".format(exam.opg18())
+        # ans.loc[20] = "Q19: {}".format(exam.opg19())
+        # ans.loc[21] = "Q20: {}".format(exam.opg20())
+        # ans.loc[22] = ""
 
-        ans.loc[23] = "Q21: {}".format(exam.opg21())
-#        ans.loc[24] = "Q22: {}".format(exam.opg22())
-#        ans.loc[25] = "Q23: {}".format(exam.opg23())
-#        ans.loc[26] = "Q24: {}".format(exam.opg24())
-#        ans.loc[27] = "Q25: {}".format(exam.opg25())
-#        ans.loc[28] = "Q26: {}".format(exam.opg26())
-#        ans.loc[29] = "Q27: {}".format(exam.opg27())
+        # ans.loc[23] = "Q21: {}".format(exam.opg21())
+        ans.loc[24] = "Q22: {}".format(exam.opg22())
+        # ans.loc[25] = "Q23: {}".format(exam.opg23())
+        # ans.loc[26] = "Q24: {}".format(exam.opg24())
+        # ans.loc[27] = "Q25: {}".format(exam.opg25())
+        # ans.loc[28] = "Q26: {}".format(exam.opg26())
+        # ans.loc[29] = "Q27: {}".format(exam.opg27())
 
         if excel:
             ans.to_excel(re.sub(".py", "_answers.xlsx", __file__), index=False)
