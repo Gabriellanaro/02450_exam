@@ -336,7 +336,7 @@ class exam:
         return "E"
 
     # -------------------------------- answers dataframe -------------------------------------------------
-    def answers(show=True, csv=True, excel=False):
+    def answers(show=False, csv=True, excel=False):
         ans = pd.DataFrame(
             columns=["Student number: s174852"]
         )  # columns = ["OPG", "svar"])
@@ -367,7 +367,7 @@ class exam:
         # ans.loc[22] = ""
 
         # ans.loc[23] = "Q21: {}".format(exam.opg21())
-        ans.loc[24] = "Q22: {}".format(exam.opg22())
+        # ans.loc[24] = "Q22: {}".format(exam.opg22())
         # ans.loc[25] = "Q23: {}".format(exam.opg23())
         # ans.loc[26] = "Q24: {}".format(exam.opg24())
         # ans.loc[27] = "Q25: {}".format(exam.opg25())

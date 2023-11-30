@@ -147,7 +147,8 @@ class exam:
         return "E"
 
     # -------------------------------- answers dataframe -------------------------------------------------
-    def answers(show=True, csv=False, excel=False):
+    def answers(show=True, csv=True, excel=False):
+
         ans = pd.DataFrame(
             columns=["Student number: s174852"]
         )  # columns = ["OPG", "svar"])
